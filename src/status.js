@@ -1,5 +1,6 @@
 let collection = [];
 const form = document.getElementById('addTodo');
+import {addEventsDragAndDrop} from './sorting';
 
 function stausCheck(ev) {
   const buttonId = ev.target.id;
@@ -7,10 +8,8 @@ function stausCheck(ev) {
   const dataGet = localStorage.getItem('todoObject');
   const data = JSON.parse(dataGet);
   if (data) {
-//   todoVar.collection = data;
     collection= data;
   }
-// console.log(buttonId);
   const rtest=collection[collection.findIndex((x) => x.id === parseInt(buttonId, 10))];
   console.log(rtest);
 
@@ -39,6 +38,11 @@ function ShowList(arr) {
     </ul>
    `).join('');
   document.getElementById('showListItem').innerHTML = `${listBook}`;
+  const test= document.querySelectorAll('.testList1');
+  console.log(test);
+  test.forEach((li) => {
+  addEventsDragAndDrop(li);
+});
 }
 
 function addList() {
