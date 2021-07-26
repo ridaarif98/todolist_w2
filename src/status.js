@@ -35,7 +35,7 @@ function ShowList(arr) {
   document.getElementById('showListItem').innerHTML = `${listBook}`;
   const test = document.querySelectorAll('.testList1');
   test.forEach((li) => {
-    new addEventsDragAndDrop(li);
+    addEventsDragAndDrop(li);
   });
 }
 
