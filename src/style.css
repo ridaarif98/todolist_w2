@@ -4,7 +4,7 @@
   background-color: whitesmoke;
   font-family: sans-serif;
 }
-  
+
 .maindiv {
   background-color: white;
   display: flex;
@@ -14,7 +14,7 @@
   justify-content: left;
   box-shadow: 5px 5px 5px 5px rgb(194, 182, 182);
 }
-  
+
 .mainList {
   list-style-type: none;
   background-color: white;
@@ -84,36 +84,36 @@ form {
   justify-content: space-between;
   background: white;
 }
-  
+
 form input {
   background: white;
   height: 50px;
   padding: 5px 10px;
   border: none;
 }
-  
+
 form input:focus {
   outline: none;
 }
-  
+
 form button {
   background: transparent;
   border: none;
   background-color: white;
 }
-  
+
 form button .fa-arrow-down {
   padding: 0 10px;
   background-color: white;
   color: rgb(136, 129, 129);
   font-size: 16px;
 }
-  
+
 .fa-ellipsis-v,
 .testList .checkboX {
   color: rgb(194, 182, 182);
 }
-  
+
 .clearBtn {
   text-align: center;
   padding: 15px;

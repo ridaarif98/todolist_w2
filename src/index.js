@@ -1,8 +1,8 @@
-import _ from 'lodash';
-import './style.css'; 
+import 'lodash';
+import './style.css';
 
 const form = document.getElementById('addTodo');
-let collection= [];
+let collection = [];
 
 function ShowList(arr) {
   const listBook = arr.map((b) => `
@@ -16,7 +16,7 @@ function ShowList(arr) {
     </ul>           
     </ul>
    `).join('');
-  document.getElementById('showListItem').innerHTML = `${listBook}`;  
+  document.getElementById('showListItem').innerHTML = `${listBook}`;
 }
 
 function addList() {
@@ -43,9 +43,8 @@ window.addEventListener('load', () => {
     ShowList(collection);
   }
 });
-  
+
 form.addEventListener('submit', (ev) => {
-    ev.preventDefault();
-    addList();
+  ev.preventDefault();
+  addList();
 });
-  
