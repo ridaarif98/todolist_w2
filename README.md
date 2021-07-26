@@ -8,6 +8,8 @@
 - Use Form for input data.
 - Display the todo list data usind display method
 - Style them using CSS
+- Apply drag and drop to sort the list
+- To change the status of a task check and uncheck it
 - Understand how to use webpack
 
 ## Built With
