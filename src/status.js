@@ -4,18 +4,13 @@ import {addEventsDragAndDrop} from './sorting';
 
 function stausCheck(ev) {
   const buttonId = ev.target.id;
-  console.log(buttonId);
   const dataGet = localStorage.getItem('todoObject');
   const data = JSON.parse(dataGet);
   if (data) {
     collection= data;
   }
   const rtest=collection[collection.findIndex((x) => x.id === parseInt(buttonId, 10))];
-  console.log(rtest);
-
   const last = collection.indexOf(rtest);
-  console.log(last);
-  console.log(collection[last].complete);
   if (collection[last].complete===false) {
     collection[last].complete=true;
   }
@@ -39,7 +34,6 @@ function ShowList(arr) {
    `).join('');
   document.getElementById('showListItem').innerHTML = `${listBook}`;
   const test= document.querySelectorAll('.testList1');
-  console.log(test);
   test.forEach((li) => {
   addEventsDragAndDrop(li);
 });
@@ -70,4 +64,4 @@ window.addEventListener('load', () => {
   }
 });
 
-export {addList, ShowList, stausCheck};
+export {addList, stausCheck};

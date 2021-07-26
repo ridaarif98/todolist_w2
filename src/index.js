@@ -1,6 +1,6 @@
 import 'lodash';
 import './style.css';
-import { addList, ShowList, stausCheck} from './status';
+import { addList, stausCheck} from './status';
 
 const form = document.getElementById('addTodo');
 
