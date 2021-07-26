@@ -1,4 +1,4 @@
-import { addEventsDragAndDrop } from './sorting.js';
+import addEventsDragAndDrop from './sorting.js';
 
 let collection = [];
 const form = document.getElementById('addTodo');
@@ -35,7 +35,7 @@ function ShowList(arr) {
   document.getElementById('showListItem').innerHTML = `${listBook}`;
   const test = document.querySelectorAll('.testList1');
   test.forEach((li) => {
-    addEventsDragAndDrop(li);
+    new addEventsDragAndDrop(li);
   });
 }
 
