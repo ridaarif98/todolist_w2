@@ -1,5 +1,5 @@
 let dragSrcEl = null;
-var listItens = document.querySelectorAll('.testList1');
+const listItens = document.querySelectorAll('.testList1');
 
 function dragStart(e) {
   this.style.opacity = '0.4';
@@ -9,7 +9,8 @@ function dragStart(e) {
 }
 
 function dragEnter(e) {
-  this.classList.add('over');
+  e.classList.add('over');
+  //this.classList.add('over');
 }
 
 function dragLeave(e) {
@@ -33,13 +34,14 @@ function dragDrop(e) {
 
 function dragEnd(e) {
   const listItens = document.querySelectorAll('.testList1');
-  [].forEach.call(listItens, function test(item) {
+  [].forEach.call(listItens, (item) => {
     item.classList.remove('over');
   });
   this.style.opacity = '1';
+  e.style.opacity= '.5';
 }
 
-function addEventsDragAndDrop(el) {
+export function addEventsDragAndDrop(el) {
   el.addEventListener('dragstart', dragStart, false);
   el.addEventListener('dragenter', dragEnter, false);
   el.addEventListener('dragover', dragOver, false);
@@ -47,9 +49,3 @@ function addEventsDragAndDrop(el) {
   el.addEventListener('drop', dragDrop, false);
   el.addEventListener('dragend', dragEnd, false);
 }
-
-[].forEach.call(listItens, function test1(item) {
-  addEventsDragAndDrop(item);
-});
-
-export { addEventsDragAndDrop };

@@ -1,7 +1,7 @@
 import { addEventsDragAndDrop } from './sorting.js';
+
 let collection = [];
 const form = document.getElementById('addTodo');
-
 
 function stausCheck(ev) {
   const buttonId = ev.target.id;
