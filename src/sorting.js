@@ -1,13 +1,12 @@
-let dragSrcEl= null;
-
-///drag and drop
+let dragSrcEl = null;
+var listItens = document.querySelectorAll('.testList1');
 
 function dragStart(e) {
   this.style.opacity = '0.4';
   dragSrcEl = this;
   e.dataTransfer.effectAllowed = 'move';
   e.dataTransfer.setData('text/html', this.innerHTML);
-};
+}
 
 function dragEnter(e) {
   this.classList.add('over');
@@ -25,7 +24,7 @@ function dragOver(e) {
 }
 
 function dragDrop(e) {
-  if (dragSrcEl != this) {
+  if (dragSrcEl !== this) {
     dragSrcEl.innerHTML = this.innerHTML;
     this.innerHTML = e.dataTransfer.getData('text/html');
   }
@@ -33,8 +32,8 @@ function dragDrop(e) {
 }
 
 function dragEnd(e) {
-  var listItens = document.querySelectorAll('.testList1');
-  [].forEach.call(listItens, function(item) {
+  const listItens = document.querySelectorAll('.testList1');
+  [].forEach.call(listItens, function test(item) {
     item.classList.remove('over');
   });
   this.style.opacity = '1';
@@ -48,9 +47,9 @@ function addEventsDragAndDrop(el) {
   el.addEventListener('drop', dragDrop, false);
   el.addEventListener('dragend', dragEnd, false);
 }
-var listItens = document.querySelectorAll('.testList1');
-[].forEach.call(listItens, function(item) {
+
+[].forEach.call(listItens, function test1(item) {
   addEventsDragAndDrop(item);
 });
 
-export {addEventsDragAndDrop};
+export { addEventsDragAndDrop };
