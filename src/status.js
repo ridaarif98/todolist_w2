@@ -27,13 +27,9 @@ function ShowList(arr) {
         <p>${b.title}</p>
         </li>
         <i class=" fa fa-ellipsis-v" id='${b.id}'></i>
-      
-              
+        <i class="fa fa-trash-o" id='${b.id}'></i>          
     </ul>
    `).join('');
-//    <ul class="iconList">
-//    <li><i class="fa fa-ellipsis-v" id='${b.id}'></i></li>
-// </ul>
   document.getElementById('showListItem').innerHTML = `${listBook}`;
   const test = document.querySelectorAll('.testList1');
   test.forEach((li) => {
@@ -55,10 +51,8 @@ function addList() {
   form.reset();
 }
 
-function editBooks(ev){
-  console.log("test");
+function editList(ev){
   const buttonId = ev.target.id;
-  console.log(buttonId);
   const dataGet = localStorage.getItem('todoObject');
   const data = JSON.parse(dataGet);
   if (data) {
@@ -73,11 +67,10 @@ function editBooks(ev){
   var editInput=test.querySelector('p');
   editInput.contentEditable=true;
   editInput.classList.add('test');
-  // const a= test.querySelector('.fa-ellipsis-v');
-  // a.style.display='none';
-  // const b = test.querySelector('.fa-trash-o');
-  // b.style.display ='block';
-  
+  const a= test.querySelector('.fa-ellipsis-v');
+  a.style.display='none';
+  const b = test.querySelector('.fa-trash-o');
+  b.style.display ='block';
   collection[last].title = editInput.innerHTML;
   console.log(collection[last].title);
 
@@ -86,8 +79,22 @@ function editBooks(ev){
     console.log(collection[last].title);
     localStorage.setItem('todoObject', JSON.stringify(collection));
   });
-
 }
+
+function removeTodo(ev) {
+    
+  const buttonId = ev.target.id;
+  collection = collection.filter(
+    (y) => y!== collection[collection.findIndex(
+      (x) => x.id === parseInt(buttonId, 10),
+      )],
+  );
+  console.log(collection);
+  localStorage.setItem('todoObject', JSON.stringify(collection));
+  console.log(buttonId);
+  ShowList(collection);
+}
+
 
 window.addEventListener('load', () => {
   const dataGet = localStorage.getItem('todoObject');
@@ -100,4 +107,4 @@ window.addEventListener('load', () => {
   }
 });
 
-export { addList, stausCheck, editBooks };
+export { addList, stausCheck, editList, removeTodo };
