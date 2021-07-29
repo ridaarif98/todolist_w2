@@ -10,6 +10,7 @@
 - Style them using CSS
 - Apply drag and drop to sort the list
 - To change the status of a task check and uncheck it
+- Implement the CRUD (create, update, delete) methods. All the elements of the user interface are fully functional
 - Understand how to use webpack
 
 ## Built With
