@@ -29,11 +29,22 @@ This project is build with:
 
 ## Getting Started
 
-To run the project on your local machine, please run the following commands on your terminal:
+# To get a local copy of this repository kindly follow the steps below:
 
-- ` git clone https://github.com/ridaarif98/todolist_w2.git`
-- run `cd todolist_w2`
-- Open the index.html file with your browser
+- In your local PC, open your terminal or command prompt in the folder you would like to clone this repository into
+- Make sure you have Node NPM installed on your computer
+-  Clone or download this repo on your machine:` git clone https://github.com/ridaarif98/todolist_w2.git`
+- Enter project directory with command `cd todolist_w2`
+
+# Install 
+
+- Run `npm install`
+- Run `run build` 
+
+# Usage 
+
+- Run `npm start`
+- Open index.html in your browser
 
 
 ## 👤 Author
