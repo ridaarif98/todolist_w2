@@ -63,6 +63,11 @@
   position: relative;
 }
 
+.fa-ellipsis-v,
+.testList .checkboX {
+  color: rgb(194, 182, 182);
+}
+
 .testList1 .fa-ellipsis-v {
   display: flex;
   flex-direction: row;
@@ -106,11 +111,6 @@ form button .fa-arrow-down {
   font-size: 16px;
 }
 
-.fa-ellipsis-v,
-.testList .checkboX {
-  color: rgb(194, 182, 182);
-}
-
 .clearBtn {
   text-align: center;
   padding: 15px;
@@ -136,4 +136,4 @@ p {
   display: none;
   background: white;
   padding-top: 10px;
-} 
+}
