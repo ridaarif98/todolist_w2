@@ -58,14 +58,14 @@ function editList(ev) {
   if (data) {
     collection = data;
   }
-  const rtest = collection[collection.findIndex((x) => x.id === parseInt(buttonId, 10))];  
+  const rtest = collection[collection.findIndex((x) => x.id === parseInt(buttonId, 10))];
   const last = collection.indexOf(rtest);
   const test = ev.target.parentNode;
   const editInput = test.querySelector('p');
   editInput.contentEditable = true;
   editInput.classList.add('test');
   const a = test.querySelector('.fa-ellipsis-v');
-  a.style.display ='none';
+  a.style.display = 'none';
   const b = test.querySelector('.fa-trash-o');
   b.style.display = 'block';
   collection[last].title = editInput.innerHTML;
@@ -88,7 +88,7 @@ function removeTodo(ev) {
 }
 
 function removeCompleted() {
-  for (let i = 0 ; i< collection.length; i = i+1) {
+  for (let i = 0; i < collection.length; i += 1) {
     if (collection[i].complete === true) {
       i -= 1;
     }
@@ -108,4 +108,6 @@ window.addEventListener('load', () => {
   }
 });
 
-export { addList, stausCheck, editList, removeTodo, removeCompleted };
+export {
+  addList, stausCheck, editList, removeTodo, removeCompleted
+};
