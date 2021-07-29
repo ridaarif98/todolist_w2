@@ -109,5 +109,5 @@ window.addEventListener('load', () => {
 });
 
 export {
-  addList, stausCheck, editList, removeTodo, removeCompleted
+  addList, stausCheck, editList, removeTodo, removeCompleted,
 };
