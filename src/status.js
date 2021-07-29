@@ -88,12 +88,7 @@ function removeTodo(ev) {
 }
 
 function removeCompleted() {
-  for (let i = 0; i < collection.length; i += 1) {
-    if (collection[i].complete === true) {
-      collection.splice(i, 1);
-      i -= 1;
-    }
-  }
+  collection = collection.filter((y)=>!y.complete).map((y,id)=>({...y,id}));
   localStorage.setItem('todoObject', JSON.stringify(collection));
   ShowList(collection);
 }
