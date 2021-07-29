@@ -57,24 +57,26 @@
   border-bottom: 1px solid #f5f5f5;
 }
 
-.testList {
-  list-style: none;
+.testList1 li {
   display: flex;
   flex-direction: row;
-  background-color: white;
-  padding: 5px 20px;
+  position: relative;
+}
+
+.fa-ellipsis-v,
+.testList .checkboX {
+  color: rgb(194, 182, 182);
+}
+
+.testList1 .fa-ellipsis-v {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: white;
 }
 
 .testList1.over {
   transform: scale(1.1, 1.1);
-}
-
-.iconList {
-  list-style: none;
-  display: flex;
-  flex-direction: row-reverse;
-  background-color: white;
-  padding: 5px 20px;
 }
 
 form {
@@ -109,11 +111,6 @@ form button .fa-arrow-down {
   font-size: 16px;
 }
 
-.fa-ellipsis-v,
-.testList .checkboX {
-  color: rgb(194, 182, 182);
-}
-
 .clearBtn {
   text-align: center;
   padding: 15px;
@@ -121,4 +118,22 @@ form button .fa-arrow-down {
   border: none;
   align-self: center;
   width: 100%;
+}
+
+p {
+  background: white;
+  padding-left: 14px;
+}
+
+.test {
+  border: 1px solid gainsboro;
+  padding: 0 10px;
+  border-radius: 6px;
+  color: #666;
+}
+
+.fa-trash-o {
+  display: none;
+  background: white;
+  padding-top: 10px;
 }

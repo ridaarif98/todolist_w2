@@ -10,7 +10,13 @@
 - Style them using CSS
 - Apply drag and drop to sort the list
 - To change the status of a task check and uncheck it
+- Implement the CRUD (create, update, delete) methods. All the elements of the user interface are fully functional
 - Understand how to use webpack
+
+## Live View
+
+[`https://ridaarif98.github.io/todolist_w2/dist/`](https://ridaarif98.github.io/todolist_w2/dist/)
+
 
 ## Built With
 
@@ -23,25 +29,23 @@ This project is build with:
 
 ## Getting Started
 
-To get the content of this project locally you need to run this command in your terminal:
+# To get a local copy of this repository kindly follow the steps below:
 
-- ` git clone https://github.com/ridaarif98/todolist_w2.git`
+- In your local PC, open your terminal or command prompt in the folder you would like to clone this repository into
+- Make sure you have Node NPM installed on your computer
+-  Clone or download this repo on your machine:` git clone https://github.com/ridaarif98/todolist_w2.git`
+- Enter project directory with command `cd todolist_w2`
 
-## Test
+# Install 
 
-For tracking linter errors locally you need to follow these steps:
+- Run `npm install`
+- Run `run build` 
 
-- After cloning the project you need to run this command
+# Usage 
 
-  > npm install
-  > This command will download all the dependancies of the project
+- Run `npm start`
+- Open index.html in your browser
 
-- For tracking the linter errors in HTML file run:
-
-  > npx hint .
-
-- And for tracking the linter errors in CSS file run:
-  > npx stylelint "\*_/_.{css,scss}"
 
 ## 👤 Author
 
