@@ -62,8 +62,6 @@ function editList(ev){
   const last = collection.indexOf(rtest);
 
   var test = ev.target.parentNode;
-  console.log(test);
-  
   var editInput=test.querySelector('p');
   editInput.contentEditable=true;
   editInput.classList.add('test');
@@ -72,11 +70,9 @@ function editList(ev){
   const b = test.querySelector('.fa-trash-o');
   b.style.display ='block';
   collection[last].title = editInput.innerHTML;
-  console.log(collection[last].title);
 
   editInput.addEventListener('keyup',() => {
     collection[last].title= editInput.innerHTML;
-    console.log(collection[last].title);
     localStorage.setItem('todoObject', JSON.stringify(collection));
   });
 }
@@ -89,12 +85,22 @@ function removeTodo(ev) {
       (x) => x.id === parseInt(buttonId, 10),
       )],
   );
-  console.log(collection);
   localStorage.setItem('todoObject', JSON.stringify(collection));
-  console.log(buttonId);
   ShowList(collection);
 }
 
+function removeCompleted() {
+  console.log('clicked');
+  for(let i=0 ; i< collection.length ; i++) {
+    if(collection[i].complete === true) {
+      console.log(collection.splice(i,1));
+      //collection.splice(i,1);
+      i-= 1;
+    }
+  }
+  localStorage.setItem('todoObject', JSON.stringify(collection));
+  ShowList(collection);
+}
 
 window.addEventListener('load', () => {
   const dataGet = localStorage.getItem('todoObject');
@@ -107,4 +113,4 @@ window.addEventListener('load', () => {
   }
 });
 
-export { addList, stausCheck, editList, removeTodo };
+export { addList, stausCheck, editList, removeTodo,removeCompleted };

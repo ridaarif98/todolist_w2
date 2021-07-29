@@ -1,6 +1,6 @@
 import 'lodash';
 import './style.css';
-import { addList, stausCheck, editList, removeTodo } from './status.js';
+import { addList, stausCheck, editList, removeTodo,removeCompleted } from './status.js';
 
 const form = document.getElementById('addTodo');
 
@@ -20,6 +20,10 @@ document.getElementById('showListItem').addEventListener('click', (e) => {
   if (e.target.classList.contains('fa-trash-o')) {
     removeTodo(e);
   }
+});
+
+document.getElementById('clearButton').addEventListener('click', () => {
+  removeCompleted();
 });
 
 form.addEventListener('submit', (ev) => {
