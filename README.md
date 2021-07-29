@@ -24,25 +24,12 @@ This project is build with:
 
 ## Getting Started
 
-To get the content of this project locally you need to run this command in your terminal:
+To run the project on your local machine, please run the following commands on your terminal:
 
 - ` git clone https://github.com/ridaarif98/todolist_w2.git`
+- run `cd todolist_w2`
+- Open the index.html file with your browser
 
-## Test
-
-For tracking linter errors locally you need to follow these steps:
-
-- After cloning the project you need to run this command
-
-  > npm install
-  > This command will download all the dependancies of the project
-
-- For tracking the linter errors in HTML file run:
-
-  > npx hint .
-
-- And for tracking the linter errors in CSS file run:
-  > npx stylelint "\*_/_.{css,scss}"
 
 ## 👤 Author
 
