@@ -83,13 +83,13 @@ function removeTodo(ev) {
       (x) => x.id === parseInt(buttonId, 10),
     )],
   );
-  collection = collection.map((el,id) => ({...el,id}));
+  collection = collection.map((el, id) => ({ ...el, id }));
   localStorage.setItem('todoObject', JSON.stringify(collection));
   ShowList(collection);
 }
 
 function removeCompleted() {
-  collection = collection.filter((y) => !y.complete).map((y,id) => ({ ...y, id }));
+  collection = collection.filter((y) => !y.complete).map((y, id) => ({ ...y, id }));
   localStorage.setItem('todoObject', JSON.stringify(collection));
   ShowList(collection);
 }
