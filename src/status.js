@@ -51,7 +51,7 @@ function addList() {
   form.reset();
 }
 
-function editList(ev){
+function editList(ev) {
   const buttonId = ev.target.id;
   const dataGet = localStorage.getItem('todoObject');
   const data = JSON.parse(dataGet);
@@ -60,7 +60,6 @@ function editList(ev){
   }
   const rtest=collection[collection.findIndex((x) => x.id === parseInt(buttonId, 10))];      
   const last = collection.indexOf(rtest);
-
   var test = ev.target.parentNode;
   var editInput=test.querySelector('p');
   editInput.contentEditable=true;
@@ -78,23 +77,20 @@ function editList(ev){
 }
 
 function removeTodo(ev) {
-    
   const buttonId = ev.target.id;
   collection = collection.filter(
     (y) => y!== collection[collection.findIndex(
       (x) => x.id === parseInt(buttonId, 10),
-      )],
+    )],
   );
   localStorage.setItem('todoObject', JSON.stringify(collection));
   ShowList(collection);
 }
 
 function removeCompleted() {
-  console.log('clicked');
   for(let i=0 ; i< collection.length ; i++) {
     if(collection[i].complete === true) {
       console.log(collection.splice(i,1));
-      //collection.splice(i,1);
       i-= 1;
     }
   }
